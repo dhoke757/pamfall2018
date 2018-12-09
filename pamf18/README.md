@@ -1,2 +1,2 @@
-# httcf18
-A demo app to show how to build apps.
+# Pitcher Accuracy Metric
+An app to show the average distance a pitcher misses his target by.
