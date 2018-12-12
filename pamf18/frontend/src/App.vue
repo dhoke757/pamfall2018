@@ -1,12 +1,26 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Home</router-link> | 
+      <router-link to="/about">About</router-link> | 
+      <router-link to="/players">Player List</router-link> | 
+      <router-link to="/about">Tracked Players</router-link> | 
+      <router-link v-if="isLoggedIn" to="/my-account">My Account</router-link><span v-if="isLoggedIn"> | </span>
+      <router-link v-if="!isLoggedIn" to="/my-account">Sign In</router-link>
+      <router-link v-if="isLoggedIn" to="/my-account">Sign Out</router-link>
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+  data: () => ({
+    isLoggedIn: false
+  })
+}
+</script>
+
 
 <style>
 #app {
